@@ -1,28 +1,33 @@
+import { useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
+
 import StudentDashboard from "../StudentDashboard";
 import "./StudentAttendance.css";
 
 export default function StudentAttendance() {
+  const [date1, setDate1] = useState(new Date());
+  const [date2, setDate2] = useState(new Date());
+
   return (
     <StudentDashboard>
       <div className="student-attendance">
-        {/* PAGE HEADER */}
-        <h2 className="fw-bold mb-1">Attendance Monitoring</h2>
-        <p className="text-muted mb-4">
-          Track your attendance records efficiently and view detailed statistics.
-          Monitor class attendance and analyze monthly or semester-wise patterns.
-        </p>
 
-        {/* OVERALL ATTENDANCE BOX */}
-        <div className="overall-box mb-4 p-3 rounded">
-          <h6 className="fw-bold">Attendance Percentage</h6>
-          <h2 className="fw-bold text-orange mt-2">92%</h2>
+        {/* HEADER */}
+        <h2 className="fw-bold mb-2">Attendance Monitoring</h2>
+        <h6 className="fw-semibold mb-4">Overall Attendance</h6>
+
+        {/* OVERALL SUMMARY */}
+        <div className="overall-box p-3 rounded mb-4">
+          <h6 className="fw-semibold mb-1">Attendance Percentage</h6>
+          <h2 className="fw-bold text-orange">92%</h2>
         </div>
 
-        {/* ATTENDANCE SUMMARY TABLE */}
+        {/* SUMMARY TABLE */}
         <h5 className="fw-bold mt-4">Attendance Summary</h5>
 
-        <div className="table-responsive mt-2">
-          <table className="table attendance-table">
+        <div className="table-container mt-3">
+          <table className="table att-table">
             <thead>
               <tr>
                 <th>Course</th>
@@ -30,27 +35,27 @@ export default function StudentAttendance() {
                 <th>Absent</th>
                 <th>Late</th>
                 <th>Peak Attendance</th>
-                <th>Remarks / Status</th>
+                <th>Status</th>
               </tr>
             </thead>
 
             <tbody>
               <tr>
-                <td>Mathematics</td>
-                <td>28</td>
+                <td>Introduction to Psychology</td>
+                <td>29</td>
                 <td>2</td>
                 <td>1</td>
-                <td className="text-orange fw-bold">98%</td>
-                <td className="text-orange fw-bold pointer">Work</td>
+                <td className="text-orange fw-bold">Work</td>
+                <td className="status-text">Pending Biometric</td>
               </tr>
 
               <tr>
-                <td>Chemistry I</td>
-                <td>27</td>
+                <td>Calculus I</td>
+                <td>26</td>
                 <td>4</td>
                 <td>0</td>
-                <td className="text-orange fw-bold">96%</td>
-                <td className="text-orange fw-bold pointer">Pending Clearance</td>
+                <td className="text-orange fw-bold">Work</td>
+                <td className="status-text">Pending Biometric</td>
               </tr>
 
               <tr>
@@ -58,72 +63,56 @@ export default function StudentAttendance() {
                 <td>29</td>
                 <td>1</td>
                 <td>0</td>
-                <td className="text-orange fw-bold">99%</td>
-                <td className="text-orange fw-bold pointer">Work</td>
+                <td className="text-orange fw-bold">Work</td>
+                <td className="status-text">Pending Biometric</td>
               </tr>
 
               <tr>
                 <td>History & Arts</td>
-                <td>26</td>
-                <td>5</td>
+                <td>27</td>
+                <td>3</td>
                 <td>1</td>
-                <td className="text-orange fw-bold">92%</td>
-                <td className="text-orange fw-bold pointer">Pending Approval</td>
-              </tr>
-
-              <tr>
-                <td>Computer Science Lab</td>
-                <td>30</td>
-                <td>0</td>
-                <td>0</td>
-                <td className="text-orange fw-bold">100%</td>
-                <td className="text-orange fw-bold pointer">Work</td>
+                <td className="text-orange fw-bold">Work</td>
+                <td className="status-text">Pending Biometric</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        {/* ATTENDANCE HISTORY */}
-        <h5 className="fw-bold mt-4">Attendance History</h5>
+        {/* HISTORY SECTION */}
+        <h5 className="fw-bold mt-5">Attendance History</h5>
 
-        {/* TOGGLE BUTTONS */}
-        <div className="d-flex gap-3 my-3">
+        <div className="toggle-btns d-flex gap-3 mt-3 mb-4">
           <button className="btn toggle-btn active-toggle">Monthly</button>
           <button className="btn toggle-btn">Semester</button>
         </div>
 
-        {/* CALENDAR SECTION */}
-        <div className="row mt-4">
-          {/* Month 1 */}
-          <div className="col-md-6 mb-4">
-            <h6 className="fw-bold">October 2023</h6>
+        <div className="row gy-4">
 
-            <div className="calendar-box mt-2 p-3 rounded">
-              <div className="calendar-grid">
-                {[...Array(31)].map((_, i) => (
-                  <div key={i} className="calendar-cell">
-                    {i + 1}
-                  </div>
-                ))}
-              </div>
+          {/* CALENDAR 1 */}
+          <div className="col-md-6">
+            <h6 className="fw-bold mb-2 text-dark">November 2025</h6>
+            <div className="calendar-box p-3 rounded">
+              <Calendar onChange={setDate1} value={date1} />
             </div>
           </div>
 
-          {/* Month 2 */}
-          <div className="col-md-6 mb-4">
-            <h6 className="fw-bold">November 2023</h6>
-
-            <div className="calendar-box mt-2 p-3 rounded">
-              <div className="calendar-grid">
-                {[...Array(30)].map((_, i) => (
-                  <div key={i} className="calendar-cell">
-                    {i + 1}
-                  </div>
-                ))}
-              </div>
+          {/* CALENDAR 2 */}
+          <div className="col-md-6">
+            <h6 className="fw-bold mb-2 text-dark">December 2025</h6>
+            <div className="calendar-box p-3 rounded">
+              <Calendar onChange={setDate2} value={date2} />
             </div>
           </div>
+
         </div>
+
+        <p className="legend mt-3 small">
+          <span className="lg present"></span> Present &nbsp;&nbsp;
+          <span className="lg absent"></span> Absent &nbsp;&nbsp;
+          <span className="lg late"></span> Late
+        </p>
+
       </div>
     </StudentDashboard>
   );

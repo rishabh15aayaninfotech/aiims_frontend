@@ -1,0 +1,56 @@
+.student-fees {
+  padding: 20px;
+}
+
+/* TABLE WRAPPER */
+.table-container {
+  background: #fff7ef;
+  border-radius: 12px;
+  border: 1px solid #ffe0c2;
+}
+
+/* TABLE BASE STYLE */
+.fees-table th {
+  background: #fff1e3 !important;
+  color: #444;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 12px;
+}
+
+.fees-table td {
+  background: #fff7ef !important;
+  padding: 12px 14px;
+  font-size: 14px;
+}
+
+/* STATUS TAGS */
+.status {
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.status.completed {
+  background: #4caf50;
+  color: white;
+}
+
+.status.pending {
+  background: #ff9800;
+  color: white;
+}
+
+/* BUTTON */
+.outstanding-btn {
+  background: var(--primary-bg);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.outstanding-btn:hover{
+    background: #d47f00;
+    color: white;
+}

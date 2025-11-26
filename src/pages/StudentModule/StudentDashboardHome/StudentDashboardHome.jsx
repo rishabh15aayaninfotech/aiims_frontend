@@ -15,18 +15,17 @@ import {
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 export default function StudentDashboardHome() {
-  // LINE CHART DATA
   const chartData = {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
     datasets: [
       {
-        label: "Progress",
-        data: [70, 72, 75, 68, 80, 85],
+        label: "",
+        data: [75, 70, 78, 65, 85, 80],
         borderColor: "#FF9437",
-        backgroundColor: "rgba(255,148,55,0.2)",
+        backgroundColor: "rgba(255,148,55,0)",
         borderWidth: 3,
         tension: 0.4,
-        pointRadius: 4,
+        pointRadius: 0,
       },
     ],
   };
@@ -34,8 +33,8 @@ export default function StudentDashboardHome() {
   const chartOptions = {
     plugins: { legend: { display: false } },
     scales: {
-      x: { ticks: { color: "#666" } },
-      y: { ticks: { color: "#666" }, min: 60, max: 100 },
+      x: { grid: { display: false }, ticks: { color: "#777" } },
+      y: { display: false, min: 50, max: 100 },
     },
   };
 
@@ -43,68 +42,55 @@ export default function StudentDashboardHome() {
     <StudentDashboard>
       <div className="dashboard-home">
 
-        {/* WELCOME HEADER */}
-        <div className="d-flex align-items-center gap-3 mb-4">
+        {/* WELCOME */}
+        <div className="welcome-box">
           <img
             src="https://i.ibb.co/4f2Bq0Q/profile-placeholder.png"
-            className="dash-profile"
+            className="welcome-img"
           />
-          <h3 className="fw-bold">Welcome back, K!</h3>
+          <h3 className="welcome-text">Welcome back, K!</h3>
         </div>
 
-        {/* QUICK OVERVIEW CARDS */}
-        <h5 className="fw-bold mb-3">Quick Overview</h5>
+        {/* QUICK OVERVIEW */}
+        <h5 className="section-heading">Quick Overview</h5>
 
-        <div className="row g-3 mb-4">
-          <div className="col-md-3">
-            <div className="overview-card">
-              <p className="label">Attendance</p>
-              <h3 className="value">92%</h3>
-              <span className="trend">+3%</span>
+        <div className="row gx-4 gy-3 overview-row">
+          {[
+            { title: "Attendance", value: "92%", sub: "+3%" },
+            { title: "Upcoming Exams", value: "2" },
+            { title: "Outstanding Fees", value: "0" },
+            { title: "Notifications", value: "3" },
+          ].map((item, index) => (
+            <div className="col-6 col-md-3" key={index}>
+              <div className="overview-card">
+                <p className="overview-title">{item.title}</p>
+                <p className="overview-value">{item.value}</p>
+                {item.sub && <span className="overview-sub">{item.sub}</span>}
+              </div>
             </div>
-          </div>
-
-          <div className="col-md-3">
-            <div className="overview-card">
-              <p className="label">Upcoming Exams</p>
-              <h3 className="value">2</h3>
-            </div>
-          </div>
-
-          <div className="col-md-3">
-            <div className="overview-card">
-              <p className="label">Outstanding Fees</p>
-              <h3 className="value">0</h3>
-            </div>
-          </div>
-
-          <div className="col-md-3">
-            <div className="overview-card">
-              <p className="label">Notifications</p>
-              <h3 className="value">3</h3>
-            </div>
-          </div>
+          ))}
         </div>
 
-        {/* ACADEMIC PROGRESS */}
-        <h5 className="fw-bold mb-2">Academic Progress</h5>
+        {/* PROGRESS */}
+        <h5 className="section-heading mt-4">Academic Progress</h5>
 
-        <div className="progress-bar-container mb-3">
+        <div className="progress-bar-wrap">
           <div className="progress-bar-fill" style={{ width: "75%" }}></div>
         </div>
 
-        <p className="progress-info text-orange">Overall Progress</p>
+        <p className="progress-sub">Overall Progress</p>
 
-        <div className="chart-box my-4">
-          <h6 className="fw-bold">Monthly Trend</h6>
-          <h3 className="trend-number">85%</h3>
-          <Line data={chartData} options={chartOptions} />
+        {/* TREND GRAPH */}
+        <div className="chart-box">
+          <h6 className="trend-title">Monthly Trend</h6>
+          <h3 className="trend-score">85%</h3>
+          <Line data={chartData} options={chartOptions} height={70} />
         </div>
 
         {/* RECENT GRADES */}
-        <h5 className="fw-bold mt-4">Recent Grades</h5>
+        <h5 className="section-heading mt-4">Recent Grades</h5>
 
-        <div className="table-responsive mt-2">
+        <div className="table-wrapper">
           <table className="table dash-table">
             <thead>
               <tr>
@@ -117,26 +103,26 @@ export default function StudentDashboardHome() {
               <tr>
                 <td>Calculus</td>
                 <td>92/100</td>
-                <td><span className="grade-badge">A</span></td>
+                <td><span className="grade-badge">A+</span></td>
               </tr>
               <tr>
                 <td>Physics</td>
                 <td>88/100</td>
-                <td><span className="grade-badge">B+</span></td>
+                <td><span className="grade-badge bplus">A</span></td>
               </tr>
               <tr>
                 <td>Chemistry</td>
                 <td>90/100</td>
-                <td><span className="grade-badge">A-</span></td>
+                <td><span className="grade-badge aminus">B+</span></td>
               </tr>
             </tbody>
           </table>
         </div>
 
         {/* UPCOMING EXAMS */}
-        <h5 className="fw-bold mt-5">Upcoming Exams</h5>
+        <h5 className="section-heading mt-4">Upcoming Exams</h5>
 
-        <div className="table-responsive mt-2">
+        <div className="table-wrapper">
           <table className="table dash-table">
             <thead>
               <tr>
@@ -145,6 +131,7 @@ export default function StudentDashboardHome() {
                 <th>Time</th>
               </tr>
             </thead>
+
             <tbody>
               <tr>
                 <td>Math II</td>
@@ -161,23 +148,25 @@ export default function StudentDashboardHome() {
         </div>
 
         {/* LEAVE STATUS */}
-        <h5 className="fw-bold mt-5">Leave Status</h5>
+        <h5 className="section-heading mt-4">Leave Status</h5>
 
-        <div className="table-responsive mt-2">
+        <div className="table-wrapper">
           <table className="table dash-table">
             <thead>
               <tr>
                 <th>Type</th>
                 <th>Status</th>
-                <th>Approved Days</th>
+                <th>Days Remaining</th>
               </tr>
             </thead>
+
             <tbody>
               <tr>
                 <td>Sick Leave</td>
                 <td><span className="status-approved">Approved</span></td>
                 <td>3</td>
               </tr>
+
               <tr>
                 <td>Casual Leave</td>
                 <td><span className="status-pending">Pending</span></td>

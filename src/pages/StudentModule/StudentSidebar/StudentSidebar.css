@@ -3,11 +3,25 @@
   width: 260px;
   background: #FFF4EC;
   padding: 20px 16px;
-  height: 90vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   position: sticky;
   top: 20px;
+  transition: all 0.3s ease;
+  max-height: 90vh;
+  overflow: hidden;
+}
+@media (max-width:768px) {
+    .student-sidebar{
+        position: static;
+        width: 100%;
+    }
+}
+.student-sidebar.collapsed {
+  height: auto;
+  max-height: 80px;
+  padding: 20px 16px;
 }
 
 /* ORANGE HEADER */
@@ -33,9 +47,26 @@
   margin: 0;
 }
 
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .header-arrow {
   font-size: 18px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 /* MENU LIST */
@@ -43,6 +74,8 @@
   list-style: none;
   padding: 0;
   margin-top: 25px;
+  transition: opacity 0.3s ease;
+  flex: 1;
 }
 
 .menu-link {
@@ -54,6 +87,7 @@
   color: #4a4a4a;
   font-size: 14px;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
 .menu-link:hover {
@@ -78,8 +112,28 @@
   gap: 10px;
   color: #444;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .help-icon {
   font-size: 18px;
+}
+
+/* Animation for smooth collapse/expand */
+.student-sidebar .sidebar-menu,
+.student-sidebar .sidebar-help {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.student-sidebar:not(.collapsed) .sidebar-menu,
+.student-sidebar:not(.collapsed) .sidebar-help {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.student-sidebar.collapsed .sidebar-menu,
+.student-sidebar.collapsed .sidebar-help {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
 }

@@ -1,60 +1,108 @@
-.student-attendance{
+.student-attendance {
   padding: 20px;
 }
+
+/* ORANGE TEXT */
 .text-orange {
-  color: #ff8a00;
+  color: var(--primary-bg);
 }
 
+/* OVERALL BOX */
 .overall-box {
-  background: #ffe7cc;
-  border: 1px solid #ffd1a1;
+  background: #ffe5cc;
+  border: 1px solid #ffd5ad;
+  border-radius: 10px;
 }
 
-.attendance-table th {
-  background: #fff5e9;
-  font-weight: 600;
-  color: #444;
-}
-
-.attendance-table td {
-  vertical-align: middle;
-}
-
-.pointer {
-  cursor: pointer;
-}
-
-/* Toggle Buttons */
-.toggle-btn {
-  background: #f4f4f4;
-  border: 1px solid #ddd;
-  padding: 6px 20px;
-  border-radius: 6px;
-}
-
-.active-toggle {
-  background: #ff8a00;
-  color: white;
-  border-color: #ff8a00;
-}
-
-/* Calendar */
-.calendar-box {
+/* SUMMARY TABLE */
+.table-container {
   background: #fff7ef;
+  border-radius: 12px;
   border: 1px solid #ffd8b5;
 }
 
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
+.att-table th {
+  background: #fff1e4 !important;
+  font-weight: 600;
+  color: #444;
+  padding: 15px !important;
+  font-size: 15px;
 }
 
-.calendar-cell {
-  background: #ffffff;
-  border: 1px solid #e8e8e8;
-  text-align: center;
-  padding: 8px 0;
+.att-table td {
+  background: #fff7ef !important;
+  vertical-align: middle;
+  padding: 15px !important;
+  font-size: 15px;
+}
+
+.status-text {
+  color: var(--primary-bg);
+  font-weight: 600;
+}
+
+/* TOGGLE BUTTONS */
+.toggle-btn {
+  background: #f2f2f2;
   border-radius: 6px;
+  padding: 6px 20px;
+  border: 1px solid #ddd;
   font-size: 14px;
 }
+
+.toggle-btn.active-toggle {
+  background: var(--primary-bg);
+  border-color: var(--primary-bg);
+  color: white;
+}
+
+/* CALENDAR BOX */
+.calendar-box {
+  background: #fff7ef;
+  border: 1px solid #ffd8b5;
+  border-radius: 12px;
+}
+
+/* CUSTOM REACT-CALENDAR STYLE */
+.react-calendar {
+  width: 100%;
+  border: none;
+  background: transparent;
+}
+
+.react-calendar__navigation button {
+  color: var(--primary-bg);
+  font-weight: bold;
+}
+
+.react-calendar__tile {
+  padding: 8px !important;
+  border-radius: 6px;
+}
+
+.react-calendar__tile--active {
+  background: var(--primary-bg) !important;
+  color: white !important;
+}
+
+.react-calendar__tile:hover {
+  background: #ffe6d3 !important;
+}
+
+/* LEGEND */
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lg {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+}
+
+.present { background: #4caf50; }
+.absent { background: #ff5252; }
+.late { background: #ffb300; }

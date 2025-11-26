@@ -8,9 +8,12 @@ import StudentAttendance from "../pages/StudentModule/StudentAttendance/StudentA
 import StudentAcademics from "../pages/StudentModule/StudentAcademics/StudentAcademics";
 import StudentExamResult from "../pages/StudentModule/StudentExamResult/StudentExamResult";
 import StudentDashboardHome from "../pages/StudentModule/StudentDashboardHome/StudentDashboardHome";
-// import StudentLogin from "../pages/StudentLogin";
-// import FacultyLogin from "../pages/FacultyLogin";
-// import DepartmentLogin from "../pages/DepartmentLogin";
+import StudentLeave from "../pages/StudentModule/StudentLeave/StudentLeave";
+import StudentFees from "../pages/StudentModule/StudentFees/StudentFees";
+import StudentCertificate from "../pages/StudentModule/StudentCertificate/StudentCertificate";
+import StudentCommunication from "../pages/StudentModule/StudentCommunication/StudentCommunication";
+import StudentSettings from "../pages/StudentModule/StudentSettings/StudentSettings";
+
 
 export default function AppRoutes() {
   return (
@@ -29,11 +32,11 @@ export default function AppRoutes() {
       <Route path="/student/attendance" element={<StudentAttendance />} />
       <Route path="/student/academics" element={<StudentAcademics />} />
       <Route path="/student/exam-results" element={<StudentExamResult />} />
-
-
-      {/* <Route path="/student-login" element={<StudentLogin />} />
-      <Route path="/faculty-login" element={<FacultyLogin />} />
-      <Route path="/department-login" element={<DepartmentLogin />} /> */}
+      <Route path="/student/leaves" element={<StudentLeave />} />
+      <Route path="/student/fees" element={<StudentFees />} />
+      <Route path="/student/certificates" element={<StudentCertificate />} />
+      <Route path="/student/communication" element={<StudentCommunication />} />
+      <Route path="/student/settings" element={<StudentSettings />} />
     </Routes>
   );
 }

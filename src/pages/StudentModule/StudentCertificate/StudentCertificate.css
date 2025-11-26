@@ -1,0 +1,85 @@
+.student-certificate {
+  padding: 20px;
+}
+
+/* TABLE WRAPPER */
+.table-container {
+  background: #fff7ef;
+  border-radius: 12px;
+  border: 1px solid #ffe0c2;
+}
+
+/* TABLE HEAD */
+.cert-table th {
+  background: #fff1e3 !important;
+  font-weight: 600;
+  color: #444;
+  padding: 10px 12px;
+}
+
+/* TABLE BODY */
+.cert-table td {
+  background: #fff7ef !important;
+  padding: 12px 14px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* STATUS TAG COLORS */
+.tag {
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.tag.issued {
+  background: #4caf50;
+  color: white;
+}
+
+.tag.ready {
+  background: #ff9437;
+  color: white;
+}
+
+.tag.pending {
+  background: #ffb74d;
+  color: white;
+}
+
+.tag.notreq {
+  background: #cfd0d1;
+  color: #333;
+}
+
+/* ACTION LINKS */
+.action-link {
+  color: var(--primary-bg);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* REQUEST FORM */
+.request-box {
+  background: #fff7ef;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ffe0c2;
+}
+
+.custom-input {
+  background: #fff4e8 !important;
+  border: 1px solid #ffd9b8 !important;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.submit-btn {
+  background: var(--primary-bg);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+}
