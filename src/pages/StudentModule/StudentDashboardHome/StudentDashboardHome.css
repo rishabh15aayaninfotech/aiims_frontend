@@ -1,0 +1,98 @@
+.dashboard-home {
+  padding: 20px;
+}
+
+.dash-profile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* QUICK OVERVIEW CARDS */
+.overview-card {
+  background: #fff1e3;
+  border: 1px solid #ffd8b5;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.overview-card .label {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.overview-card .value {
+  font-weight: 700;
+  color: #333;
+}
+
+.trend {
+  font-size: 12px;
+  color: green;
+}
+
+/* PROGRESS BAR */
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background: #ffe0c2;
+  border-radius: 10px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--primary-bg);
+  border-radius: 10px;
+}
+
+.text-orange {
+  color: var(--primary-bg);
+}
+
+/* CHART BOX */
+.chart-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ffd8b5;
+}
+
+.trend-number {
+  color: var(--primary-bg);
+  margin-bottom: 20px;
+}
+
+/* TABLE STYLE */
+.dash-table th {
+  background: #fff1e2;
+  color: #444;
+  font-weight: 600;
+}
+
+.dash-table td {
+  background: #fff7ef;
+  padding: 14px;
+  vertical-align: middle;
+}
+
+.grade-badge {
+  background: var(--primary-bg);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.status-approved {
+  background: #4CAF50;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: white;
+}
+
+.status-pending {
+  background: #FFB74D;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: white;
+}

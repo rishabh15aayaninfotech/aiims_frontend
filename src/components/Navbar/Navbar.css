@@ -1,0 +1,77 @@
+.aiims-header {
+  background-color: #fe9a39;
+  width: 100%;
+}
+
+.aiims-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.institute-text .title-hindi {
+  font-size: 28px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.institute-text .title-eng {
+  font-size: 14px;
+  color: white;
+}
+
+.institute-text .sub-text {
+  font-size: 11px;
+  color: white;
+}
+
+/* Buttons */
+.login-btn-nav {
+  border: 2px solid white;
+  color: white;
+  padding: 7px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.login-btn-nav:hover {
+  background: white;
+  color: #fe9a39;
+}
+
+.register-btn {
+  background: white;
+  color: #fe9a39;
+  padding: 7px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.register-btn:hover {
+  background: #ffe5c9;
+}
+
+/* MOBILE */
+@media (max-width: 992px) {
+  .institute-text {
+    display: none;
+  }
+
+  .aiims-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .navbar-nav .btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  #aiimsNavbar {
+    display: none !important;
+  }
+}
+

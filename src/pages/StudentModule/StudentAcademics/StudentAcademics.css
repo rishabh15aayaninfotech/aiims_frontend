@@ -1,0 +1,63 @@
+.student-academics{
+    padding: 20px;
+}
+.academics-table th {
+  background: #fff4ec;
+  font-weight: 600;
+  color: #444;
+}
+
+.academics-table td {
+  vertical-align: middle;
+}
+
+.grade-badge {
+  background: #ff9437;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.grade-bplus {
+  background: #ffb26b;
+}
+
+/* CALENDAR */
+.calendar-container {
+  background: #fff7ef;
+  border: 1px solid #ffe0c2;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-head {
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+.calendar-cell {
+  background: white;
+  border: 1px solid #eee;
+  padding: 6px 0;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* CLASS SCHEDULE TABLE */
+.schedule-table th {
+  background: #fff4ec;
+  font-weight: 600;
+  color: #444;
+}
+
+.schedule-table td {
+  vertical-align: middle;
+}

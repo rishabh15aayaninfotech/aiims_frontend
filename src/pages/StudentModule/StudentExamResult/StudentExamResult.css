@@ -1,0 +1,29 @@
+.student-exam{
+    padding: 20px;
+}
+.exam-table {
+  background: #fff7ef;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.exam-table th {
+  background: #fff1e2;
+  font-weight: 600;
+  color: #444;
+  padding: 14px;
+}
+
+.exam-table td {
+  background: #fff7ef;
+  padding: 14px;
+  vertical-align: middle;
+}
+
+.exam-table tr:not(:last-child) td {
+  border-bottom: 1px solid #ffe0c2;
+}
+
+.exam-table tbody tr:hover td {
+  background: #ffe9d6;
+}

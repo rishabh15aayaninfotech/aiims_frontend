@@ -1,0 +1,145 @@
+.register-page {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+@media (max-width:768px) {
+    .register-page{
+        padding: 20px;
+    }
+}
+.register-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.register-card {
+  position: relative;
+  z-index: 2;
+  background: white;
+  max-width: 450px;
+  width: 100%;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* HEADER */
+.register-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.register-welcome {
+  color: #ff8f32;
+  font-weight: 600;
+  margin: 0;
+  font-size: 18px;
+}
+
+.register-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.register-subtitle {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #555;
+  line-height: 18px;
+}
+
+.register-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* FORM FIELDS */
+.form-label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.form-control, .form-select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* OTP ROW */
+.otp-wrapper {
+  position: relative;
+}
+
+.otp-btn {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  background: #ff8f32;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.otp-btn:hover {
+  background: #ff9f45;
+}
+
+/* PASSWORD FIELDS */
+.password-wrapper {
+  position: relative;
+}
+
+.pass-icon {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  color: #777;
+  font-size: 18px;
+}
+
+/* SUBMIT BUTTON */
+.register-page-btn {
+  background: #ff8f32;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.register-page-btn:hover {
+  background: #ff9f45;
+}
+
+/* BOTTOM TEXT */
+.register-bottom-text {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.login-link {
+  color: #ff8f32;
+  font-weight: 600;
+  text-decoration: none;
+}

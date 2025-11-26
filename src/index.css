@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Roboto", "Poppins", sans-serif;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+:root {
+  --primary-bg: #FF9437;
+  --primary-text: #ffffff;
+  --secondary-bg: #FF9437;
+  --secondary-text: #000000;
+}

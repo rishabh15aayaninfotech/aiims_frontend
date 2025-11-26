@@ -1,0 +1,149 @@
+/* Full page background */
+.login-page {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 60px 0;
+}
+@media (max-width:768px) {
+    .login-page{
+        padding: 20px;
+    }
+}
+/* Dim overlay */
+.login-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+/* Main Card */
+.login-page-card {
+  position: relative;
+  z-index: 2;
+  background: white;
+  max-width: 450px;
+  width: 100%;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.login-welcome {
+  color: #ff8f32;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.login-page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff8f32;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #ff8f32;
+  margin-top: 5px;
+  line-height: 18px;
+}
+
+/* Logo */
+.login-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Form */
+.form-label {
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.form-control,
+.form-select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+}
+
+/* Password field with icon */
+.password-wrapper {
+  position: relative;
+}
+
+.pass-icon {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  cursor: pointer;
+  color: #ff8f32;
+  font-size: 18px;
+}
+
+/* Options row */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.forgot-password {
+  font-size: 14px;
+  color: #ff8f32;
+  text-decoration: none;
+}
+
+/* Submit Button */
+.login-btn {
+  background: #ff8f32;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #ff9f45;
+}
+
+/* Contact Info */
+.contact-info {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.contact-info a {
+  color: #ff8f32;
+  text-decoration: none;
+}

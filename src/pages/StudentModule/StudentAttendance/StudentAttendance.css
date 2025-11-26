@@ -1,0 +1,60 @@
+.student-attendance{
+  padding: 20px;
+}
+.text-orange {
+  color: #ff8a00;
+}
+
+.overall-box {
+  background: #ffe7cc;
+  border: 1px solid #ffd1a1;
+}
+
+.attendance-table th {
+  background: #fff5e9;
+  font-weight: 600;
+  color: #444;
+}
+
+.attendance-table td {
+  vertical-align: middle;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* Toggle Buttons */
+.toggle-btn {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 6px 20px;
+  border-radius: 6px;
+}
+
+.active-toggle {
+  background: #ff8a00;
+  color: white;
+  border-color: #ff8a00;
+}
+
+/* Calendar */
+.calendar-box {
+  background: #fff7ef;
+  border: 1px solid #ffd8b5;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-cell {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 6px;
+  font-size: 14px;
+}
