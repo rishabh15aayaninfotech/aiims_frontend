@@ -1,179 +1,158 @@
 import StudentDashboard from "../StudentDashboard";
 import "./StudentDashboardHome.css";
 
-import { Line } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Tooltip,
-  Legend,
-} from "chart.js";
+import { FaBell, FaCheckCircle } from "react-icons/fa";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend);
+import { useState } from "react";
 
 export default function StudentDashboardHome() {
-  const chartData = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-    datasets: [
-      {
-        label: "",
-        data: [75, 70, 78, 65, 85, 80],
-        borderColor: "#FF9437",
-        backgroundColor: "rgba(255,148,55,0)",
-        borderWidth: 3,
-        tension: 0.4,
-        pointRadius: 0,
-      },
-    ],
-  };
-
-  const chartOptions = {
-    plugins: { legend: { display: false } },
-    scales: {
-      x: { grid: { display: false }, ticks: { color: "#777" } },
-      y: { display: false, min: 50, max: 100 },
-    },
-  };
+  const [date, setDate] = useState(new Date());
 
   return (
     <StudentDashboard>
       <div className="dashboard-home">
 
-        {/* WELCOME */}
-        <div className="welcome-box">
+        {/* TOP WELCOME */}
+        <div className="welcome-section">
           <img
             src="https://i.ibb.co/4f2Bq0Q/profile-placeholder.png"
             className="welcome-img"
           />
-          <h3 className="welcome-text">Welcome back, K!</h3>
+          <div>
+            <h3 className="welcome-text">Welcome back, K!</h3>
+          </div>
         </div>
 
-        {/* QUICK OVERVIEW */}
-        <h5 className="section-heading">Quick Overview</h5>
-
-        <div className="row gx-4 gy-3 overview-row">
-          {[
-            { title: "Attendance", value: "92%", sub: "+3%" },
-            { title: "Upcoming Exams", value: "2" },
-            { title: "Outstanding Fees", value: "0" },
-            { title: "Notifications", value: "3" },
-          ].map((item, index) => (
-            <div className="col-6 col-md-3" key={index}>
-              <div className="overview-card">
-                <p className="overview-title">{item.title}</p>
-                <p className="overview-value">{item.value}</p>
-                {item.sub && <span className="overview-sub">{item.sub}</span>}
-              </div>
-            </div>
-          ))}
+        {/* ENROLLMENT DETAILS */}
+        <h4 className="section-heading">Enrollment Details</h4>
+        <div className="info-grid">
+          <div><label>Academic Year</label><p>2023–2024</p></div>
+          <div><label>Program</label><p>Bachelor of Technology</p></div>
+          <div><label>Semester</label><p>5th Semester</p></div>
+          <div><label>Enrollment No.</label><p>KSY2023019</p></div>
         </div>
 
-        {/* PROGRESS */}
-        <h5 className="section-heading mt-4">Academic Progress</h5>
-
-        <div className="progress-bar-wrap">
-          <div className="progress-bar-fill" style={{ width: "75%" }}></div>
+        {/* NOTIFICATIONS */}
+        <h4 className="section-heading">Notifications</h4>
+        <div className="notification-box">
+          <FaBell className="bell-icon" />
+          <p>Registration forms for Fall semester</p>
         </div>
 
-        <p className="progress-sub">Overall Progress</p>
+        {/* ATTENDANCE BLOCK */}
+        <h4 className="section-heading">Attendance</h4>
 
-        {/* TREND GRAPH */}
-        <div className="chart-box">
-          <h6 className="trend-title">Monthly Trend</h6>
-          <h3 className="trend-score">85%</h3>
-          <Line data={chartData} options={chartOptions} height={70} />
-        </div>
-
-        {/* RECENT GRADES */}
-        <h5 className="section-heading mt-4">Recent Grades</h5>
-
-        <div className="table-wrapper">
-          <table className="table dash-table">
+        <div className="attendance-table-wrapper">
+          <table className="table mini-table">
             <thead>
               <tr>
-                <th>Subject</th>
-                <th>Score</th>
-                <th>Grade</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Calculus</td>
-                <td>92/100</td>
-                <td><span className="grade-badge">A+</span></td>
-              </tr>
-              <tr>
-                <td>Physics</td>
-                <td>88/100</td>
-                <td><span className="grade-badge bplus">A</span></td>
-              </tr>
-              <tr>
-                <td>Chemistry</td>
-                <td>90/100</td>
-                <td><span className="grade-badge aminus">B+</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        {/* UPCOMING EXAMS */}
-        <h5 className="section-heading mt-4">Upcoming Exams</h5>
-
-        <div className="table-wrapper">
-          <table className="table dash-table">
-            <thead>
-              <tr>
-                <th>Subject</th>
-                <th>Date</th>
-                <th>Time</th>
+                <th>Course</th>
+                <th>Total Classes</th>
+                <th>Attended</th>
+                <th>Attendance %</th>
               </tr>
             </thead>
 
             <tbody>
               <tr>
-                <td>Math II</td>
-                <td>2024-05-16</td>
-                <td>10:00 AM</td>
+                <td>Computer Networks</td>
+                <td>30</td>
+                <td>27</td>
+                <td>
+                  <div className="progress-small"><div style={{ width: "90%" }}></div></div>
+                </td>
               </tr>
               <tr>
-                <td>Physics</td>
-                <td>2024-05-18</td>
-                <td>2:00 PM</td>
+                <td>Mathematics III</td>
+                <td>28</td>
+                <td>24</td>
+                <td>
+                  <div className="progress-small"><div style={{ width: "82%" }}></div></div>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        {/* LEAVE STATUS */}
-        <h5 className="section-heading mt-4">Leave Status</h5>
+        {/* Recent Activities */}
+        <h4 className="section-heading">Recent Activities</h4>
+        <div className="activity-box">
+          <p><FaCheckCircle className="act-icon" /> Assignment Submission</p>
+          <span>English Literature</span>
+        </div>
 
-        <div className="table-wrapper">
-          <table className="table dash-table">
-            <thead>
-              <tr>
-                <th>Type</th>
-                <th>Status</th>
-                <th>Days Remaining</th>
-              </tr>
-            </thead>
+        {/* FEES & FINANCE */}
+        <h4 className="section-heading">Fees & Finance</h4>
 
-            <tbody>
-              <tr>
-                <td>Sick Leave</td>
-                <td><span className="status-approved">Approved</span></td>
-                <td>3</td>
-              </tr>
+        <div className="fee-box">
+          <div><label>Total Fee</label><p>₹48,000</p></div>
+          <div><label>Paid</label><p>₹48,000</p></div>
+          <div><label>Due</label><p>₹0</p></div>
+        </div>
 
-              <tr>
-                <td>Casual Leave</td>
-                <td><span className="status-pending">Pending</span></td>
-                <td>1</td>
-              </tr>
-            </tbody>
-          </table>
+        {/* COURSES & SUBJECTS */}
+        <h4 className="section-heading mt-4">Courses & Subjects</h4>
+
+        <table className="table mini-table">
+          <thead>
+            <tr>
+              <th>Course Code</th>
+              <th>Course Title</th>
+              <th>Credit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CSE301</td>
+              <td>Computer Networks</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>MAT205</td>
+              <td>Maths III</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>ENG102</td>
+              <td>English Literature</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+
+        {/* EXAMS */}
+        <h4 className="section-heading mt-4">Exams</h4>
+
+        <div className="row">
+          <div className="col-md-4">
+            <Calendar className="custom-calendar" value={date} onChange={setDate} />
+          </div>
+
+          <div className="col-md-8">
+            <table className="table mini-table mt-3 mt-md-0">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Computer Networks</td>
+                  <td>2025-11-05</td>
+                  <td>10:00 AM</td>
+                </tr>
+                <tr>
+                  <td>Maths III</td>
+                  <td>2025-11-08</td>
+                  <td>01:00 PM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
       </div>

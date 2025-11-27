@@ -14,9 +14,9 @@ import {
   FaAngleUp
 } from "react-icons/fa";
 import { useState } from "react";
-import "./StudentSidebar.css";
+import "./FacultySidebar.css";
 
-export default function StudentSidebar() {
+export default function FacultySidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   const toggleSidebar = () => {
@@ -24,14 +24,14 @@ export default function StudentSidebar() {
   };
 
   return (
-    <aside className={`student-sidebar ${isCollapsed ? "collapsed" : ""}`}>
+    <aside className={`faculty-sidebar ${isCollapsed ? "collapsed" : ""}`}>
 
       {/* TOP HEADER */}
       <div className="sidebar-header">
-        <NavLink to="/student/dashboard/home">
+        <NavLink to="/faculty/dashboard/home">
           <div>
             <h4 className="sidebar-title">Dashboard</h4>
-            <p className="sidebar-role">Student</p>
+            <p className="sidebar-role">faculty</p>
           </div>
         </NavLink>
 
@@ -50,71 +50,57 @@ export default function StudentSidebar() {
           <ul className="sidebar-menu">
 
             <li>
-              <NavLink to="/student/profile" className="menu-link">
+              <NavLink to="/faculty/profile" className="menu-link">
                 <FaUser className="menu-icon" />
-                <span>Students Profile</span>
+                <span>Faculty Profile</span>
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/student/attendance" className="menu-link">
+              <NavLink to="/faculty/attendance" className="menu-link">
                 <FaCalendar className="menu-icon" />
-                <span>Attendance</span>
+                <span>Attendance Management</span>
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/student/academics" className="menu-link">
+              <NavLink to="/faculty/academics" className="menu-link">
                 <FaBook className="menu-icon" />
-                <span>Academics</span>
+                <span>Course & Class Management</span>
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/student/exam-results" className="menu-link">
+              <NavLink to="/faculty/exam-results" className="menu-link">
                 <FaClipboardList className="menu-icon" />
-                <span>Exams & Results</span>
+                <span>Examination Management</span>
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/student/leaves" className="menu-link">
+              <NavLink to="/faculty/leaves" className="menu-link">
                 <FaWpforms className="menu-icon" />
-                <span>Leave Requests</span>
+                <span>Leave Management</span>
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/student/fees" className="menu-link">
-                <FaFileAlt className="menu-icon" />
-                <span>Fees</span>
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink to="/student/certificates" className="menu-link">
-                <FaCertificate className="menu-icon" />
-                <span>Certificates</span>
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink to="/student/communication" className="menu-link">
+              <NavLink to="/faculty/communication" className="menu-link">
                 <FaComments className="menu-icon" />
                 <span>Communication</span>
               </NavLink>
             </li>
-
+            
             <li>
-              <NavLink to="/student/settings" className="menu-link">
-                <FaCog className="menu-icon" />
-                <span>Settings</span>
+              <NavLink to="/faculty/communication" className="menu-link">
+                <FaComments className="menu-icon" />
+                <span>Reports & Analysis</span>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/student/help" className="menu-link">
-                <FaQuestionCircle className="menu-icon" />
-                <span>Help</span>
+              <NavLink to="/faculty/settings" className="menu-link">
+                <FaCog className="menu-icon" />
+                <span>Security Access Control</span>
               </NavLink>
             </li>
 

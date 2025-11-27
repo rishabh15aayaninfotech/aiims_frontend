@@ -8,15 +8,17 @@
   align-items: center;
   padding: 60px;
 }
-@media (max-width:768px) {
-    .register-page{
-        padding: 20px;
-    }
+
+@media (max-width: 768px) {
+  .register-page {
+    padding: 20px;
+  }
 }
+
 .register-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.65);
   z-index: 1;
 }
 
@@ -24,11 +26,11 @@
   position: relative;
   z-index: 2;
   background: white;
-  max-width: 450px;
+  max-width: 800px;
   width: 100%;
   padding: 35px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
 }
 
 /* HEADER */
@@ -40,7 +42,7 @@
 
 .register-welcome {
   color: #ff8f32;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0;
   font-size: 18px;
 }
@@ -48,37 +50,37 @@
 .register-title {
   font-size: 26px;
   font-weight: 700;
-  margin: 5px 0;
+  margin: 3px 0;
 }
 
 .register-subtitle {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #555;
   line-height: 18px;
+  font-weight: 500;
 }
 
 .register-logo {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+  width: 85px;
 }
 
 /* FORM FIELDS */
 .form-label {
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 5px;
   color: #444;
 }
 
-.form-control, .form-select {
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+.form-control,
+.form-select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d5d5d5;
   font-size: 14px;
 }
 
-/* OTP ROW */
+/* OTP Container */
 .otp-wrapper {
   position: relative;
 }
@@ -94,13 +96,10 @@
   border-radius: 6px;
   font-size: 12px;
   cursor: pointer;
+  font-weight: 600;
 }
 
-.otp-btn:hover {
-  background: #ff9f45;
-}
-
-/* PASSWORD FIELDS */
+/* PASSWORD */
 .password-wrapper {
   position: relative;
 }
@@ -108,7 +107,7 @@
 .pass-icon {
   position: absolute;
   right: 12px;
-  top: 12px;
+  top: 5px;
   cursor: pointer;
   color: #777;
   font-size: 18px;
@@ -119,10 +118,10 @@
   background: #ff8f32;
   border: none;
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   color: white;
-  font-weight: 600;
-  border-radius: 8px;
+  font-weight: 700;
+  border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
 }
@@ -131,15 +130,51 @@
   background: #ff9f45;
 }
 
-/* BOTTOM TEXT */
+/* Bottom text */
 .register-bottom-text {
   text-align: center;
   font-size: 14px;
-  color: #555;
+  color: #777;
+  margin: 0;
 }
+
 
 .login-link {
   color: #ff8f32;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
+}
+/* MOBILE INPUT (TOP FIELD) */
+.mobile-input {
+  height: 45px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* SEND OTP BUTTON */
+.otp-send-btn {
+  margin-top: 5px;
+  height: 45px;
+  border-radius: 10px;
+  border: 2px solid #ff8f32;
+  background: transparent;
+  color: #ff8f32;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.otp-send-btn:hover {
+  background: #ff8f32;
+  color: white;
+  transition: 0.2s;
+}
+
+/* OTP INPUT FIELD */
+.otp-input {
+  margin-top: 5px;
+  height: 45px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
 }

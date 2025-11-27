@@ -1,0 +1,72 @@
+.student-settings {
+  padding: 20px;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* SETTINGS BLOCK */
+.settings-section {
+  margin-bottom: 35px;
+}
+
+/* EACH ROW */
+.settings-row {
+  background: #fff7ef;
+  border: 1px solid #ffe0c2;
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TITLES INSIDE ROW */
+.setting-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.setting-sub {
+  font-size: 13px;
+  margin: 2px 0 0;
+  color: #888;
+}
+
+/* ACTION BUTTON */
+.action-btn {
+  background: #fff2e3;
+  border-radius: 8px;
+  border: 1px solid #ffd4ad;
+  padding: 5px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-bg);
+  transition: 0.2s;
+}
+
+.action-btn:hover {
+  background: var(--primary-bg);
+  color: white;
+  border-color: var(--primary-bg);
+}
+
+/* RESPONSIVE */
+@media (max-width: 576px) {
+  .settings-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+}

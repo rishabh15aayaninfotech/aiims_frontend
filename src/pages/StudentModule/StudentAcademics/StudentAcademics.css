@@ -1,63 +1,103 @@
-.student-academics{
-    padding: 20px;
+.student-academics {
+  padding: 20px;
 }
+
+/* ================= TABLE STYLING ================= */
+.table-wrapper {
+  background: #fff7ef;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ffe0c2;
+}
+
 .academics-table th {
-  background: #fff4ec;
+  background: #fff4ec !important;
   font-weight: 600;
   color: #444;
 }
 
 .academics-table td {
+  background: #fff7ef !important;
   vertical-align: middle;
 }
 
+.instructor {
+  color: var(--primary-bg);
+  font-weight: 500;
+}
+
+/* ================= GRADES ================= */
 .grade-badge {
   background: #ff9437;
   color: white;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 14px;
 }
 
-.grade-bplus {
+.bplus {
   background: #ffb26b;
 }
 
-/* CALENDAR */
-.calendar-container {
+.aminus {
+  background: #f4a261;
+}
+
+/* ================= CALENDAR BOX ================= */
+.calendar-box {
   background: #fff7ef;
   border: 1px solid #ffe0c2;
+  border-radius: 12px;
 }
 
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
+/* REAL REACT CALENDAR STYLING */
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  background: transparent !important;
 }
 
-.calendar-head {
+.react-calendar__navigation button {
+  color: var(--primary-bg);
   font-weight: 600;
-  text-align: center;
-  color: #333;
 }
 
-.calendar-cell {
-  background: white;
-  border: 1px solid #eee;
-  padding: 6px 0;
-  border-radius: 6px;
-  text-align: center;
-  font-size: 14px;
+.react-calendar__tile {
+  padding: 10px !important;
+  border-radius: 6px !important;
 }
 
-/* CLASS SCHEDULE TABLE */
+.react-calendar__tile--active {
+  background: var(--primary-bg) !important;
+  color: white !important;
+}
+
+.react-calendar__tile:hover {
+  background: #ffe4d1 !important;
+}
+
+/* ================= SCHEDULE TABLE ================= */
 .schedule-table th {
-  background: #fff4ec;
-  font-weight: 600;
-  color: #444;
+  background: #fff4ec !important;
 }
 
 .schedule-table td {
-  vertical-align: middle;
+  background: #fff7ef !important;
+}
+
+.location {
+  color: var(--primary-bg);
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .schedule-table td,
+  .academics-table td {
+    font-size: 14px;
+  }
+
+  .grade-badge {
+    padding: 4px 10px;
+  }
 }

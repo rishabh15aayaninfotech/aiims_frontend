@@ -13,6 +13,10 @@ import StudentFees from "../pages/StudentModule/StudentFees/StudentFees";
 import StudentCertificate from "../pages/StudentModule/StudentCertificate/StudentCertificate";
 import StudentCommunication from "../pages/StudentModule/StudentCommunication/StudentCommunication";
 import StudentSettings from "../pages/StudentModule/StudentSettings/StudentSettings";
+import FacultyDashboardHome from "../pages/FacultyModule/FacultyDashboardHome/FacultyDashboardHome";
+import FacultyDashboard from "../pages/FacultyModule/FacultyDashboard";
+import Contact from "../pages/Contact/Contact";
+import FacultyProfile from "../pages/FacultyModule/FacultyProfile/FacultyProfile";
 
 
 export default function AppRoutes() {
@@ -24,6 +28,9 @@ export default function AppRoutes() {
 
       {/* Landing Page */}
       <Route path="/" element={<Home />} />
+
+      {/* Contact Page */}
+      <Route path="/contact" element={<Contact />} />
 
       {/* Student Module */}
       <Route path="/student/dashboard" element={<Navigate to="/student/dashboard/home" replace />} />
@@ -37,6 +44,12 @@ export default function AppRoutes() {
       <Route path="/student/certificates" element={<StudentCertificate />} />
       <Route path="/student/communication" element={<StudentCommunication />} />
       <Route path="/student/settings" element={<StudentSettings />} />
+
+      {/* Faculty Module */}
+      <Route path="/faculty/dashboard" element={<Navigate to="/faculty/dashboard/home" replace />} />
+      <Route path="/faculty/dashboard/home" element={<FacultyDashboardHome />} />
+      <Route path="/faculty/profile" element={<FacultyProfile />} />
+
     </Routes>
   );
 }

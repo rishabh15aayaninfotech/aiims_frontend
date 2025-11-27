@@ -1,4 +1,5 @@
 import "./HeroSection.css";
+import { Link } from "react-router-dom";
 import heroImg from "../images/hero.png";
 import { FaUserGraduate, FaBook, FaUsers } from "react-icons/fa";
 
@@ -22,9 +23,8 @@ export default function HeroSection() {
               Management<br />
               System
             </h1>
-            <a href="/student-portal" className="hero-btn">
-              Student Portal
-            </a>
+            <Link to="/student/dashboard" className="hero-btn"> Student Portal
+            </Link>
           </div>
         </div>
 

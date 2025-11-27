@@ -1,5 +1,4 @@
-/* MAIN SIDEBAR STYLE */
-.student-sidebar {
+.faculty-sidebar {
   width: 260px;
   background: #FFF4EC;
   padding: 20px 16px;
@@ -9,16 +8,16 @@
   position: sticky;
   top: 20px;
   transition: all 0.3s ease;
-  max-height: 100vh;
+  max-height: 90vh;
   overflow: hidden;
 }
 @media (max-width:768px) {
-    .student-sidebar{
+    .faculty-sidebar{
         position: static;
         width: 100%;
     }
 }
-.student-sidebar.collapsed {
+.faculty-sidebar.collapsed {
   height: auto;
   max-height: 80px;
   padding: 20px 16px;
@@ -120,19 +119,19 @@
 }
 
 /* Animation for smooth collapse/expand */
-.student-sidebar .sidebar-menu,
-.student-sidebar .sidebar-help {
+.faculty-sidebar .sidebar-menu,
+.faculty-sidebar .sidebar-help {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.student-sidebar:not(.collapsed) .sidebar-menu,
-.student-sidebar:not(.collapsed) .sidebar-help {
+.faculty-sidebar:not(.collapsed) .sidebar-menu,
+.faculty-sidebar:not(.collapsed) .sidebar-help {
   opacity: 1;
   transform: translateY(0);
 }
 
-.student-sidebar.collapsed .sidebar-menu,
-.student-sidebar.collapsed .sidebar-help {
+.faculty-sidebar.collapsed .sidebar-menu,
+.faculty-sidebar.collapsed .sidebar-help {
   opacity: 0;
   transform: translateY(-10px);
   pointer-events: none;

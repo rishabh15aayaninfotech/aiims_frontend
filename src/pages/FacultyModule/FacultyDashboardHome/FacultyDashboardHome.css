@@ -1,0 +1,152 @@
+.faculty-home {
+  padding: 20px;
+}
+
+/* ---------- HEADER ---------- */
+.faculty-welcome {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.faculty-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.faculty-welcome h3 {
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ---------- SECTION TITLE ---------- */
+.section-heading {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* ---------- QUICK STATS ---------- */
+.stats-row {
+  display: flex;
+  gap: 18px;
+}
+
+.stat-card {
+  background: #fff7ef;
+  border: 1px solid #ffe0c2;
+  padding: 16px 22px;
+  border-radius: 10px;
+  width: 280px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+}
+
+.stat-green {
+  color: green;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ---------- TABLE BOX ---------- */
+.table-box {
+  background: #fff7ef;
+  border: 1px solid #ffd9b8;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.faculty-table th {
+  background: #fff1df !important;
+  padding: 14px !important;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.faculty-table td {
+  background: #fff7ef !important;
+  padding: 14px !important;
+  font-size: 14px;
+  border-bottom: 1px solid #ffe8d5 !important;
+}
+
+.faculty-table tbody tr:hover td {
+  background: #ffe8d2 !important;
+}
+
+/* ---------- ATTENDANCE SUMMARY ---------- */
+.attendance-box {
+  background: #fff7ef;
+  border: 1px solid #ffd7b5;
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.att-title {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.att-percent {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ff8a00;
+}
+
+.att-sub {
+  color: green;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* BAR GRAPH */
+.att-bars {
+  display: flex;
+  gap: 25px;
+  align-items: baseline;
+}
+
+.bar-item {
+  text-align: center;
+}
+
+.bar {
+  width: 70px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.bar1 { height: 80px; background: #ffb87a; }
+.bar2 { height: 120px; background: #ff9a4f; }
+.bar3 { height: 90px; background: #ffd3b3; }
+
+/* ---------- NOTIFICATIONS ---------- */
+.notification-card {
+  background: #fff7ef;
+  border: 1px solid #ffd9b8;
+  padding: 14px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.note-icon {
+  font-size: 22px;
+  color: #ff8a00;
+}

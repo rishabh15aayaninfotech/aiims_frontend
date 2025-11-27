@@ -1,0 +1,65 @@
+/* Fullscreen background */
+.loader-container {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+}
+
+/* Logo in center */
+.loader-logo {
+  width: 100px;    
+  /* height: 100px; */
+  border-radius: 50%;
+  z-index: 10;
+  position: absolute;
+}
+
+/* Base ring style */
+.ring {
+  border: 3px solid #d6336c;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  animation: rotate 1.8s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+}
+
+/* Smaller rings */
+.ring1 { width: 150px; height: 150px; }
+
+.ring2 { 
+  width: 175px;
+  height: 175px;
+  border-color: #3bc9db;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate2 1.8s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+}
+
+.ring3 { width: 200px; height: 200px; }
+
+.ring4 { 
+  width: 230px;
+  height: 230px;
+  border-color: #3bc9db;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: rotate2 1.8s cubic-bezier(0.26, 1.36, 0.74, -0.29) infinite;
+}
+
+/* Animations */
+@keyframes rotate {
+  0% { transform: rotateZ(-360deg); }
+  100% { transform: rotateZ(0deg); }
+}
+
+@keyframes rotate2 {
+  0% { transform: rotateZ(360deg); }
+  100% { transform: rotateZ(0deg); }
+}

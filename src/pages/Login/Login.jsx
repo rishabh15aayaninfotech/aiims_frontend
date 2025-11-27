@@ -1,22 +1,27 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
 import logo from "./images/logo.png";
 import bg from "./images/bg-login.jpg";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Login() {
   const [showPass, setShowPass] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+
+  const handleCaptcha = (value) => {
+    if (value) setCaptchaVerified(true);
+  };
 
   return (
     <div className="login-page" style={{ backgroundImage: `url(${bg})` }}>
 
-      {/* Overlay */}
       <div className="login-overlay"></div>
 
-      {/* CENTER CARD */}
       <div className="login-page-card">
 
-        {/* HEADER SECTION */}
+        {/* HEADER */}
         <div className="login-header">
           <div>
             <h4 className="login-welcome">Welcome !</h4>
@@ -31,7 +36,6 @@ export default function Login() {
           <img src={logo} alt="logo" className="login-logo" />
         </div>
 
-        {/* FORM */}
         <form>
 
           {/* ROLE */}
@@ -69,25 +73,33 @@ export default function Login() {
 
           {/* OPTIONS ROW */}
           <div className="login-options">
-            <label className="checkbox-label">
-              <input type="checkbox" />
-              <span> I'm not a robot</span>
-            </label>
+            {/* GOOGLE RECAPTCHA */}
+            <div className="recaptcha-box">
+              <ReCAPTCHA
+                sitekey="6LfGt_grAAAAAKP2MrWG_PwVCP7t7bYjbZ78qeNn"
+                onChange={handleCaptcha}
+              />
+            </div>
 
-            <a href="#" className="forgot-password">
+            {/* FORGOT PASSWORD */}
+            <Link to="/forgot-password" className="forgot-password">
               Forgot Password ?
-            </a>
+            </Link>
           </div>
 
-          {/* BUTTON */}
-          <button type="submit" className="login-btn mt-3">
+          {/* SUBMIT BUTTON */}
+          <button
+            type="submit"
+            className="login-btn mt-3"
+            disabled={!captchaVerified}
+          >
             Submit
           </button>
 
-          {/* CONTACT */}
+          {/* CONTACT INFO */}
           <p className="contact-info mt-3">
             Having an issue while login?{" "}
-            <a href="#">Contact Us</a>
+            <Link to="/contact" className="contact-link">Contact Us</Link>
           </p>
         </form>
       </div>

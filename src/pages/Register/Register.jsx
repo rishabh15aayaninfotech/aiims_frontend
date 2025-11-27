@@ -4,7 +4,7 @@ import logo from "./images/logo.png";
 import bg from "./images/bg-login.jpg";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
-
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Register() {
   const [showPass, setShowPass] = useState(false);
@@ -12,13 +12,12 @@ export default function Register() {
 
   return (
     <div className="register-page" style={{ backgroundImage: `url(${bg})` }}>
-      
+
       <div className="register-overlay"></div>
 
-      {/* Main Card */}
       <div className="register-card">
 
-        {/* Header */}
+        {/* HEADER */}
         <div className="register-header">
           <div>
             <h4 className="register-welcome">Welcome !</h4>
@@ -32,92 +31,127 @@ export default function Register() {
           <img src={logo} className="register-logo" alt="logo" />
         </div>
 
-        {/* Form */}
+        {/* FORM */}
         <form>
+          <div className="row align-items-center">
+            <div className="col-md-6">{/* ROLE */}
+              <label className="form-label">Role</label>
+              <select className="form-control form-select mb-3">
+                <option>Select Role</option>
+                <option>Student</option>
+                <option>Faculty</option>
+                <option>Department</option>
+              </select>
+            </div>
+            <div className="col-md-6">
+              {/* FULL NAME */}
+              <label className="form-label">Full Name</label>
+              <input
+                type="text"
+                className="form-control mb-3"
+                placeholder="Enter your full name"
+              />
+            </div>
+            <div className="col-md-6">
+              {/* MOBILE NUMBER */}
+              <label className="form-label">Mobile Number</label>
+              <input
+                type="text"
+                className="form-control mb-3 mobile-input"
+                placeholder="Enter your Mobile Number"
+              />
 
-          {/* ROLE */}
-          <label className="form-label">Role</label>
-          <select className="form-control form-select mb-3">
-            <option>Select Role</option>
-            <option>Student</option>
-            <option>Faculty</option>
-            <option>Department</option>
-          </select>
+              <div className="row mb-3">
+                {/* SEND OTP BUTTON */}
+                <div className="col-6">
+                  <button type="button" className="otp-send-btn w-100">Send OTP</button>
+                </div>
 
-          {/* FULL NAME */}
-          <label className="form-label">Full Name</label>
-          <input
-            type="text"
-            className="form-control mb-3"
-            placeholder="Enter your full name"
-          />
+                {/* OTP INPUT */}
+                <div className="col-6">
+                  <input
+                    type="text"
+                    className="form-control otp-input"
+                    placeholder="Enter OTP"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              {/* Email */}
+              <label className="form-label">Email</label>
+              <input
+                type="text"
+                className="form-control mb-3 mobile-input"
+                placeholder="Enter your Email"
+              />
 
-          {/* MOBILE / EMAIL */}
-          <label className="form-label">Mobile Number or Email</label>
-          <div className="otp-wrapper">
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Enter your Mobile Number or Email"
-            />
+              <div className="row mb-3">
+                {/* SEND OTP BUTTON */}
+                <div className="col-6">
+                  <button type="button" className="otp-send-btn w-100">Send OTP</button>
+                </div>
 
-            <button type="button" className="otp-btn">Send OTP</button>
+                {/* OTP INPUT */}
+                <div className="col-6">
+                  <input
+                    type="text"
+                    className="form-control otp-input"
+                    placeholder="Enter OTP"
+                  />
+                </div>
+              </div>
+
+            </div>
+            <div className="col-md-6">{/* PASSWORD */}
+              <label className="form-label">Password</label>
+              <div className="password-wrapper mb-3">
+                <input
+                  type={showPass ? "text" : "password"}
+                  className="form-control"
+                  placeholder="Enter your Password"
+                />
+                <span
+                  className="pass-icon"
+                  onClick={() => setShowPass(!showPass)}
+                >
+                  {showPass ? <FaEyeSlash /> : <FaEye />}
+                </span>
+              </div>
+            </div>
+            <div className="col-md-6">
+              {/* CONFIRM PASSWORD */}
+              <label className="form-label">Confirm Password</label>
+              <div className="password-wrapper mb-3">
+                <input
+                  type={showCPass ? "text" : "password"}
+                  className="form-control"
+                  placeholder="Enter your Confirm Password"
+                />
+                <span
+                  className="pass-icon"
+                  onClick={() => setShowCPass(!showCPass)}
+                >
+                  {showCPass ? <FaEyeSlash /> : <FaEye />}
+                </span>
+              </div>
+            </div>
+            <div className="col-md-6 mt-3">
+            </div>
+            <div className="col-md-6 mt-3">
+              {/* SUBMIT */}
+
+              <button type="submit" className="register-page-btn">
+                Submit
+              </button>
+              <p className="register-bottom-text mt-2">
+                Already have an account?{" "}
+                <Link to="/login" className="login-link">Login</Link>
+              </p>
+            </div>
           </div>
-
-          {/* OTP */}
-          <label className="form-label mt-3">OTP</label>
-          <input
-            type="text"
-            className="form-control mb-3"
-            placeholder="Enter OTP"
-          />
-
-          {/* PASSWORD */}
-          <label className="form-label">Password</label>
-          <div className="password-wrapper">
-            <input
-              type={showPass ? "text" : "password"}
-              className="form-control"
-              placeholder="Enter your Password"
-            />
-            <span
-              className="pass-icon"
-              onClick={() => setShowPass(!showPass)}
-            >
-              {showPass ? <FaEyeSlash /> : <FaEye />}
-            </span>
-          </div>
-
-          {/* CONFIRM PASSWORD */}
-          <label className="form-label mt-3">Confirm Password</label>
-          <div className="password-wrapper">
-            <input
-              type={showCPass ? "text" : "password"}
-              className="form-control"
-              placeholder="Enter your Confirm Password"
-            />
-            <span
-              className="pass-icon"
-              onClick={() => setShowCPass(!showCPass)}
-            >
-              {showCPass ? <FaEyeSlash /> : <FaEye />}
-            </span>
-          </div>
-
-          {/* SUBMIT */}
-          <button type="submit" className="register-page-btn mt-4">
-            Submit
-          </button>
-
-          {/* Already have account */}
-          <p className="register-bottom-text mt-3">
-            Already have an account?{" "}
-            <Link to="/login" className="login-link">Login</Link>
-          </p>
-
         </form>
-      </div>
-
-    </div>
+      </div >
+    </div >
   );
 }

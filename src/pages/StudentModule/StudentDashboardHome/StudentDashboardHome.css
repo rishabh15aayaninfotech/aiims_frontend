@@ -1,149 +1,135 @@
 .dashboard-home {
-  padding: 30px;
-  border-radius: 16px;
+  padding: 20px;
 }
 
 /* WELCOME */
-.welcome-box {
+.welcome-section {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
 }
 
 .welcome-img {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
 }
 
 .welcome-text {
   font-weight: 700;
+}
+
+/* HEADINGS */
+.section-heading {
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+/* ENROLLMENT GRID */
+.info-grid {
+  background: #fff7ef;
+  border: 1px solid #ffe0c2;
+  padding: 15px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 12px;
+  column-gap: 15px;
+}
+
+.info-grid label {
+  font-size: 12px;
+  color: #888;
+}
+
+.info-grid p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* NOTIFICATION BOX */
+.notification-box {
+  background: #fff7ef;
+  border: 1px solid #ffe0c2;
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bell-icon {
+  color: #ff9437;
+  font-size: 18px;
+}
+
+/* MINI TABLE */
+.mini-table th {
+  background-color: #fff1e3 !important;
+  color: #444;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 15px !important;
+}
+
+.mini-table td {
+  background-color: #fff7ef !important;
+  vertical-align: middle;
+  font-size: 13px;
+  padding: 15px !important;
+}
+
+/* PROGRESS SMALL */
+.progress-small {
+  width: 100%;
+  height: 8px;
+  background: #ffe7d1;
+  border-radius: 5px;
+}
+
+.progress-small div {
+  background: #ff9437;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* ACTIVITIES */
+.activity-box {
+  background: #fff7ef;
+  border: 1px solid #ffe0c2;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.act-icon {
+  color: green;
+  margin-right: 6px;
+}
+
+/* FEES BOX */
+.fee-box {
+  background: #fff7ef;
+  border: 1px solid #ffe0c2;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fee-box label {
+  font-size: 12px;
+  color: #888;
+}
+
+.fee-box p {
+  font-weight: 700;
   margin: 0;
 }
 
-/* SECTION TITLE */
-.section-heading {
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 25px;
-  margin-bottom: 12px;
-}
-
-/* OVERVIEW CARDS */
-.overview-row {
-  margin-top: 5px;
-}
-
-.overview-card {
-  background: #fff7ef;
-  border: 1px solid #ffe0c2;
-  padding: 14px 18px;
-  border-radius: 10px;
-  height: 100%;
-}
-
-.overview-title {
-  font-size: 13px;
-  color: #6b6b6b;
-  margin-bottom: 6px;
-}
-
-.overview-value {
-  font-size: 22px;
-  font-weight: 700;
-  color: #333;
-}
-
-.overview-sub {
-  font-size: 12px;
-  color: green;
-}
-
-/* PROGRESS BAR */
-.progress-bar-wrap {
-  width: 100%;
-  height: 6px;
-  background: #ffe7d4;
-  border-radius: 10px;
-}
-
-.progress-bar-fill {
-  background: #ff9437;
-  height: 100%;
-  border-radius: 10px;
-}
-
-.progress-sub {
-  font-size: 13px;
-  color: #ff9437;
-  margin-top: 6px;
-}
-
-/* CHART */
-.chart-box {
-  background: #ffffff;
-  padding: 22px;
-  margin-top: 18px;
-  border: 1px solid #ffe0c2;
+/* CALENDAR */
+.custom-calendar {
+  border: 1px solid #ffe0c2 !important;
   border-radius: 12px;
-}
-
-.trend-title {
-  font-weight: 600;
-  margin-bottom: 3px;
-}
-
-.trend-score {
-  color: #ff9437;
-  margin-bottom: 15px;
-}
-
-/* TABLES */
-.table-wrapper {
-  margin-top: 10px;
-}
-
-.dash-table th {
-  background: #fff1e3;
-  color: #444;
-  font-size: 14px;
-  font-weight: 600;
-  padding: 12px 12px;
-}
-
-.dash-table td {
-  background: #fff7ef;
-  padding: 15px 14px !important;
-  vertical-align: middle;
-  font-size: 14px;
-}
-
-.grade-badge,
-.status-approved,
-.status-pending {
-  padding: 5px 12px;
-  border-radius: 6px;
-  color: #fff;
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.grade-badge {
-  background: #ffe0c2;
-}
-
-.bplus {
-  background: #ffe0c2;
-}
-
-.aminus {
-  background: #ffe0c2;
-}
-
-.status-approved {
-  background: #4caf50;
-}
-
-.status-pending {
-  background: #ff9800;
+  background: #fff7ef !important;
 }

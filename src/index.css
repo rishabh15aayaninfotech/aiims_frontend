@@ -23,3 +23,6 @@ a {
   --secondary-bg: #FF9437;
   --secondary-text: #000000;
 }
+.table>:not(caption)>*>*{
+  background: #fff7ef;
+}
