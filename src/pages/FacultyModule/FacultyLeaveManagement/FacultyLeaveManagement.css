@@ -1,0 +1,107 @@
+.faculty-leave {
+  padding: 20px;
+}
+
+/* FORM CARD */
+.leave-form-card {
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ffe0c2;
+}
+
+.form-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.custom-input {
+  border: 1px solid #ffd6b4 !important;
+  background: white !important;
+  border-radius: 8px;
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  background: var(--primary-bg);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* CALENDAR */
+.calendar-section {
+  margin: 0 auto;
+}
+
+.calendar-month {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.calendar {
+  margin-top: 10px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 35px);
+  gap: 8px;
+}
+
+.cal-day-head {
+  font-weight: 600;
+  color: #666;
+}
+
+.cal-day {
+  padding: 6px;
+  text-align: center;
+  background: white;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid #ffd8b5;
+  cursor: pointer;
+}
+
+.cal-day.active {
+  background: var(--primary-bg);
+  color: white;
+  border-color: var(--primary-bg);
+}
+
+/* LEAVE HISTORY TABLE */
+.leave-table th {
+  background: #fff1e3 !important;
+  color: #444;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.leave-table td {
+  background: #fff7ef;
+  padding: 12px;
+}
+
+/* STATUS BADGES */
+.status {
+  padding: 6px 15px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.status.approved {
+  background: #4caf50;
+  color: white;
+}
+
+.status.pending {
+  background: #ff9800;
+  color: white;
+}
+
+.status.rejected {
+  background: #e53935;
+  color: white;
+}

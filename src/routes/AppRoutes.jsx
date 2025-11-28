@@ -17,6 +17,16 @@ import FacultyDashboardHome from "../pages/FacultyModule/FacultyDashboardHome/Fa
 import FacultyDashboard from "../pages/FacultyModule/FacultyDashboard";
 import Contact from "../pages/Contact/Contact";
 import FacultyProfile from "../pages/FacultyModule/FacultyProfile/FacultyProfile";
+import FacultyAttendance from "../pages/FacultyModule/FacultyAttendance/FacultyAttendance";
+import FacultyClassManagement from "../pages/FacultyModule/FacultyClassManagement/FacultyClassManagement";
+import FacultyExamManagement from "../pages/FacultyModule/FacultyExamManagement/FacultyExamManagement";
+import FacultyLeave from "../pages/FacultyModule/FacultyLeaveManagement/FacultyLeaveManagement";
+import FacultyEvaluation from "../pages/FacultyModule/FacultyEvaluation/FacultyEvaluation";
+import Terms from "../pages/Terms/Terms";
+import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
+import FacultyCommunication from "../pages/FacultyModule/FacultyCommunication/FacultyCommunication";
+import FacultyReports from "../pages/FacultyModule/FacultyReports/FacultyReports";
+import FacultySecurity from "../pages/FacultyModule/FacultySecurity/FacultySecurity";
 
 
 export default function AppRoutes() {
@@ -49,6 +59,18 @@ export default function AppRoutes() {
       <Route path="/faculty/dashboard" element={<Navigate to="/faculty/dashboard/home" replace />} />
       <Route path="/faculty/dashboard/home" element={<FacultyDashboardHome />} />
       <Route path="/faculty/profile" element={<FacultyProfile />} />
+      <Route path="/faculty/attendance" element={<FacultyAttendance />} />
+      <Route path="/faculty/class" element={<FacultyClassManagement />} />
+      <Route path="/faculty/exam" element={<FacultyExamManagement />} />
+      <Route path="/faculty/evaluation" element={<FacultyEvaluation />} />
+      <Route path="/faculty/leaves" element={<FacultyLeave />} />
+      <Route path="/faculty/communication" element={<FacultyCommunication />} />
+      <Route path="/faculty/reports" element={<FacultyReports />} />
+      <Route path="/faculty/security" element={<FacultySecurity />} />
+
+      {/* Privacy Policy & Terms of Service */}
+      <Route path="/terms" element={<Terms />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
     </Routes>
   );

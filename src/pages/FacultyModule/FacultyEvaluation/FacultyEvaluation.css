@@ -1,0 +1,161 @@
+.faculty-eval {
+  padding: 20px;
+}
+
+/* Search */
+.search-wrapper {
+  background: #fff7ef;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #ffd8b5;
+  border-radius: 8px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 25px;
+}
+
+.tab {
+  font-weight: 600;
+  padding-bottom: 6px;
+  cursor: pointer;
+  color: #777;
+}
+
+.tab.active {
+  color: #ff8a00;
+  border-bottom: 3px solid #ff8a00;
+}
+
+/* Cards */
+.perf-card {
+  background: #fff7ef;
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid #ffd8b5;
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.grade-main {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+}
+
+.grade-change {
+  color: #28a745;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Bar chart */
+.grade-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.bar-group {
+  text-align: center;
+}
+
+.bar {
+  height: 80px;
+  width: 10px;
+  background: #ff8a00;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+/* Line chart placeholder */
+.line-graph {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Table */
+.table-wrapper {
+  background: #fff7ef;
+  border-radius: 12px;
+  border: 1px solid #ffd8b5;
+  overflow: hidden;
+}
+
+.eval-table th {
+  background: #fff1e3;
+  padding: 14px;
+  font-weight: 600;
+}
+
+.eval-table td {
+  background: #fff7ef;
+  padding: 14px;
+  vertical-align: middle;
+}
+
+/* Orange link */
+.orange-link {
+  color: #ff8a00;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Assignment bar */
+.assign-box {
+  background: #ffe0c2;
+  width: 100%;
+  height: 8px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+.assign-fill {
+  height: 100%;
+  background: #ff8a00;
+  border-radius: 6px;
+}
+
+.assign-num {
+  font-weight: 600;
+  color: #ff8a00;
+}
+/* Wave Chart Container */
+.wave-chart {
+  width: 100%;
+  background: #fff7ef;
+  border-radius: 12px;
+  padding: 10px 5px 0 5px;
+  text-align: center;
+}
+
+/* SVG Wave */
+.wave-chart svg {
+  width: 100%;
+  height: 110px;
+}
+
+/* Labels under the wave */
+.wave-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 0 10px 5px;
+}
+
+.wave-labels span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff8a00;
+}

@@ -64,16 +64,23 @@ export default function FacultySidebar() {
             </li>
 
             <li>
-              <NavLink to="/faculty/academics" className="menu-link">
+              <NavLink to="/faculty/class" className="menu-link">
                 <FaBook className="menu-icon" />
                 <span>Course & Class Management</span>
               </NavLink>
             </li>
 
             <li>
-              <NavLink to="/faculty/exam-results" className="menu-link">
+              <NavLink to="/faculty/exam" className="menu-link">
                 <FaClipboardList className="menu-icon" />
                 <span>Examination Management</span>
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/faculty/evaluation" className="menu-link">
+                <FaClipboardList className="menu-icon" />
+                <span>Evaluation Performance</span>
               </NavLink>
             </li>
 
@@ -92,13 +99,13 @@ export default function FacultySidebar() {
             </li>
             
             <li>
-              <NavLink to="/faculty/communication" className="menu-link">
+              <NavLink to="/faculty/reports" className="menu-link">
                 <FaComments className="menu-icon" />
                 <span>Reports & Analysis</span>
               </NavLink>
             </li>
             <li>
-              <NavLink to="/faculty/settings" className="menu-link">
+              <NavLink to="/faculty/security" className="menu-link">
                 <FaCog className="menu-icon" />
                 <span>Security Access Control</span>
               </NavLink>

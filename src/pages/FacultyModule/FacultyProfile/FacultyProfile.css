@@ -1,34 +1,90 @@
-.profile-faculty {
+.faculty-profile-container {
   padding: 20px;
 }
-.profile-pic {
-  width: 80px;
-  height: 80px;
+
+/* Header */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  font-weight: 700;
+  margin: 0;
+}
+
+.edit-btn {
+  background: #ff9437;
+  color: white;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Profile Card */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #fff7ef;
+  border: 1px solid #ffe0c2;
+  padding: 18px;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.profile-image {
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.section-title {
+.faculty-name {
+  margin: 0;
   font-weight: 700;
-  color: #333;
+}
+
+.faculty-role {
+  margin: 0;
+  color: #ff9437;
+  font-weight: 600;
+}
+
+.faculty-id {
+  margin: 0;
+  color: #444;
+}
+
+/* Section Heading */
+.section-heading {
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* Info Box */
+.info-box {
+  background: white;
+  border: 1px solid #f0d8c8;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
 }
 
 .label {
   font-size: 13px;
   color: #777;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 .value {
   font-size: 15px;
   font-weight: 600;
   color: #222;
-}
-
-.profile-header-box {
-  padding: 15px 0;
-}
-
-hr {
-  margin: 0 0 15px 0;
+  margin-bottom: 15px;
 }

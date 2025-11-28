@@ -4,109 +4,107 @@ import "./FacultyProfile.css";
 export default function FacultyProfile() {
     return (
         <FacultyDashboard>
-            <div className="profile-faculty">
-                {/* Page Header */}
-                <div className="d-flex justify-content-between align-items-center mb-4">
-                    <h2 className="fw-bold">faculty Profile</h2>
-                    <button className="btn btn-warning text-white px-4">Edit Profile</button>
+            <div className="faculty-profile-container">
+
+                {/* Top Header */}
+                <div className="top-header">
+                    <h2 className="page-title">Faculty Profile</h2>
+                    <button className="edit-btn">Edit Profile</button>
                 </div>
 
-                {/* PROFILE HEADER SECTION */}
-                <div className="d-flex align-items-center gap-3 mb-4 profile-header-box">
-
+                {/* Profile Intro Card */}
+                <div className="profile-card">
                     <img
                         src="https://i.ibb.co/4f2Bq0Q/profile-placeholder.png"
-                        className="profile-pic"
-                        alt="profile"
+                        className="profile-image"
+                        alt="Faculty"
                     />
 
                     <div>
-                        <h4 className="fw-bold mb-1">theK</h4>
-                        <p className="text-muted mb-0">faculty ID: 123456789</p>
-                        <p className="text-primary mb-0">
-                            Academic Program: Bachelor of Science in Computer Science
-                        </p>
+                        <h4 className="faculty-name">Dr. Anya Sharma</h4>
+                        <p className="faculty-role">Professor of Computer Science</p>
+                        <p className="faculty-id">Faculty ID: 12345</p>
                     </div>
-
                 </div>
 
                 {/* PERSONAL INFORMATION */}
-                <h5 className="section-title mt-4">Personal Information</h5>
-                <hr />
+                <h5 className="section-heading">Personal Information</h5>
+                <div className="info-box">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <p className="label">Full Name</p>
+                            <p className="value">Sophia Clark</p>
+                        </div>
 
-                <div className="row mb-3">
-                    <div className="col-md-6 mb-3">
-                        <p className="label">Full Name</p>
-                        <p className="value">Sophia Clark</p>
-                    </div>
+                        <div className="col-md-6">
+                            <p className="label">Faculty ID</p>
+                            <p className="value">12345</p>
+                        </div>
 
-                    <div className="col-md-6 mb-3">
-                        <p className="label">faculty ID</p>
-                        <p className="value">123456789</p>
-                    </div>
+                        <div className="col-md-6">
+                            <p className="label">Date of Birth</p>
+                            <p className="value">June 15, 1997</p>
+                        </div>
 
-                    <div className="col-md-6 mb-3">
-                        <p className="label">Date of Birth</p>
-                        <p className="value">May 15, 2003</p>
-                    </div>
+                        <div className="col-md-6">
+                            <p className="label">Gender</p>
+                            <p className="value">Female</p>
+                        </div>
 
-                    <div className="col-md-6 mb-3">
-                        <p className="label">Gender</p>
-                        <p className="value">Female</p>
-                    </div>
-
-                    <div className="col-md-6 mb-3">
-                        <p className="label">Nationality</p>
-                        <p className="value">Indian</p>
+                        <div className="col-md-6">
+                            <p className="label">Nationality</p>
+                            <p className="value">Indian</p>
+                        </div>
                     </div>
                 </div>
 
                 {/* CONTACT INFORMATION */}
-                <h5 className="section-title mt-4">Contact Information</h5>
-                <hr />
+                <h5 className="section-heading">Contact Information</h5>
+                <div className="info-box">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <p className="label">Email</p>
+                            <p className="value">anya.sharma@university.edu</p>
+                        </div>
 
-                <div className="row mb-3">
-                    <div className="col-md-6 mb-3">
-                        <p className="label">Email Address</p>
-                        <p className="value">sophiaclark@example.edu</p>
+                        <div className="col-md-6">
+                            <p className="label">Phone Number</p>
+                            <p className="value">+1-555-123-4567</p>
+                        </div>
+
+                        <div className="col-md-12">
+                            <p className="label">Office</p>
+                            <p className="value">Room 302, Science Building</p>
+                        </div>
                     </div>
+                </div>
 
-                    <div className="col-md-6 mb-3">
-                        <p className="label">Phone Number</p>
-                        <p className="value">(555) 123-4567</p>
-                    </div>
+                {/* ACADEMIC QUALIFICATIONS */}
+                <h5 className="section-heading">Academic Qualifications</h5>
+                <div className="info-box">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <p className="label">Highest Degree</p>
+                            <p className="value">Ph.D. in Computer Science</p>
+                        </div>
 
-                    <div className="col-md-12 mb-3">
-                        <p className="label">Address</p>
-                        <p className="value">123 University Ave, Cityville, State, 12345</p>
+                        <div className="col-md-6">
+                            <p className="label">Institution</p>
+                            <p className="value">Institute of Advanced Studies</p>
+                        </div>
                     </div>
                 </div>
 
-                {/* ACADEMIC INFORMATION */}
-                <h5 className="section-title mt-4">Academic Information</h5>
-                <hr />
-
-                <div className="row mb-3">
-                    <div className="col-md-6 mb-3">
-                        <p className="label">Program</p>
-                        <p className="value">Bachelor of Science</p>
-                    </div>
-
-                    <div className="col-md-6 mb-3">
-                        <p className="label">Major</p>
-                        <p className="value">Computer Science</p>
-                    </div>
-
-                    <div className="col-md-6 mb-3">
-                        <p className="label">Year of Study</p>
-                        <p className="value">2023</p>
-                    </div>
-
-                    <div className="col-md-6 mb-3">
-                        <p className="label">GPA</p>
-                        <p className="value">8.9</p>
-                    </div>
+                {/* TEACHING SPECIALIZATIONS */}
+                <h5 className="section-heading">Teaching Specializations</h5>
+                <div className="info-box">
+                    <p className="label">Specializations</p>
+                    <p className="value">
+                        Artificial Intelligence<br />
+                        Machine Learning
+                    </p>
                 </div>
+
             </div>
         </FacultyDashboard>
     );
