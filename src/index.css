@@ -26,3 +26,6 @@ a {
 .table>:not(caption)>*>*{
   background: #fff7ef;
 }
+p{
+  margin-bottom: 0;
+}
