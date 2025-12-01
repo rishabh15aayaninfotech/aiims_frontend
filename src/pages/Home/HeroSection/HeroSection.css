@@ -1,10 +1,9 @@
 /* Main Wrapper */
 .hero-wrapper {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 .hero-container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -42,7 +41,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 50px;
   position: relative;
 }
 
@@ -82,12 +80,24 @@
 /* Feature Boxes */
 .features-row {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-  margin-top: -40px;
+  margin-top: -60px;
   position: relative;
   z-index: 10;
-  padding: 0 20px;
+
+  padding: 20px 20px;
+  width: 100%;
+  max-width: 90%;
+
+  background: #f8f8f8;
+  border-radius: 25px;
+
+  margin-left: auto;  
+  margin-right: auto;
 }
+
 
 .feature-box {
   flex: 1;

@@ -2,106 +2,115 @@
   padding: 20px;
 }
 
-/* FORM CARD */
-.leave-form-card {
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #ffe0c2;
-}
-
-.form-title {
-  font-size: 16px;
+/* ORANGE LINK */
+.course-link {
+  color: #ff8a00;
   font-weight: 600;
-}
-
-.custom-input {
-  border: 1px solid #ffd6b4 !important;
-  background: white !important;
-  border-radius: 8px;
-}
-
-/* SUBMIT BUTTON */
-.submit-btn {
-  background: var(--primary-bg);
-  color: white;
-  padding: 10px 25px;
-  border-radius: 10px;
-  font-weight: 600;
-}
-
-/* CALENDAR */
-.calendar-section {
-  margin: 0 auto;
-}
-
-.calendar-month {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.calendar {
-  margin-top: 10px;
-}
-
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 35px);
-  gap: 8px;
-}
-
-.cal-day-head {
-  font-weight: 600;
-  color: #666;
-}
-
-.cal-day {
-  padding: 6px;
-  text-align: center;
-  background: white;
-  border-radius: 6px;
-  font-size: 14px;
-  border: 1px solid #ffd8b5;
   cursor: pointer;
 }
 
-.cal-day.active {
-  background: var(--primary-bg);
-  color: white;
-  border-color: var(--primary-bg);
+/* WRAPPER CARD (matches Figma box) */
+.table-card {
+  background: #fff7ef;
+  border: 1px solid #ffd8b5;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0;
+  margin-bottom: 15px;
 }
 
-/* LEAVE HISTORY TABLE */
+/* TABLE HEAD */
 .leave-table th {
   background: #fff1e3 !important;
   color: #444;
-  font-size: 14px;
+  padding: 14px;
+  font-size: 15px;
   font-weight: 600;
 }
 
+/* TABLE BODY */
 .leave-table td {
   background: #fff7ef;
-  padding: 12px;
+  padding: 14px;
+  vertical-align: middle;
+  font-size: 15px;
+  color: #444;
 }
 
-/* STATUS BADGES */
-.status {
-  padding: 6px 15px;
+.leave-table tr:not(:last-child) td {
+  border-bottom: 1px solid #ffe0c2;
+}
+
+/* DATE STYLE */
+.date-line {
+  color: #555;
+  font-size: 14px;
+}
+
+/* STATUS PILL */
+.pill {
+  padding: 5px 14px;
   border-radius: 12px;
-  font-weight: 600;
   font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
 }
 
-.status.approved {
-  background: #4caf50;
-  color: white;
+.pill.pending {
+  background: #ffbb66;
+  color: #744200;
 }
 
-.status.pending {
-  background: #ff9800;
-  color: white;
+.pill.approved {
+  background: #c7efc3;
+  color: #2e7d32;
 }
 
-.status.rejected {
-  background: #e53935;
-  color: white;
+.pill.rejected {
+  background: #ffc7c7;
+  color: #c62828;
+}
+
+/* ACTION BUTTONS */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.action-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.action-icon.approve {
+  background: #e6ffec;
+  color: #1b8f3a;
+}
+
+.action-icon.reject {
+  background: #ffecec;
+  color: #d32f2f;
+}
+
+.action-icon:hover {
+  opacity: 0.8;
+}
+
+/* SEARCH BAR */
+.search-box {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ffd8b5;
+  background: #fff7ef;
+  font-size: 14px;
 }

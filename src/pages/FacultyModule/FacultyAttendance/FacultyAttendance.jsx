@@ -59,7 +59,7 @@ export default function FacultyAttendance() {
         </div>
 
         <div className="text-end">
-          <button className="btn btn-orange mt-2">Submit Attendance</button>
+          <button className="btn-orange mt-2">Submit Attendance</button>
         </div>
 
         {/* ========== SECTION 2: ATTENDANCE RECORDS ========== */}
@@ -126,7 +126,7 @@ export default function FacultyAttendance() {
         </div>
 
         <div className="text-end">
-          <button className="btn btn-orange mt-2">Download Report</button>
+          <button className="btn-orange mt-2">Download Report</button>
         </div>
 
         <div className="table-wrapper mt-3">

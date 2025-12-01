@@ -21,7 +21,7 @@ a {
   --primary-bg: #FF9437;
   --primary-text: #ffffff;
   --secondary-bg: #FF9437;
-  --secondary-text: #000000;
+  --secondary-text: #FF9437;
 }
 .table>:not(caption)>*>*{
   background: #fff7ef;

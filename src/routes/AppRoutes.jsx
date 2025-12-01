@@ -27,6 +27,8 @@ import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
 import FacultyCommunication from "../pages/FacultyModule/FacultyCommunication/FacultyCommunication";
 import FacultyReports from "../pages/FacultyModule/FacultyReports/FacultyReports";
 import FacultySecurity from "../pages/FacultyModule/FacultySecurity/FacultySecurity";
+import AdminDashboard from "../pages/AdminModule/AdminDashboard";
+import AdminDashboardHome from "../pages/AdminModule/AdminDashboardHome/AdminDashboardHome";
 
 
 export default function AppRoutes() {
@@ -67,6 +69,10 @@ export default function AppRoutes() {
       <Route path="/faculty/communication" element={<FacultyCommunication />} />
       <Route path="/faculty/reports" element={<FacultyReports />} />
       <Route path="/faculty/security" element={<FacultySecurity />} />
+
+      {/* Admin Module */}
+      <Route path="/admin/dashboard" element={<Navigate to="/admin/dashboard/home" replace />} />
+      <Route path="/admin/dashboard/home" element={<AdminDashboardHome />} />
 
       {/* Privacy Policy & Terms of Service */}
       <Route path="/terms" element={<Terms />} />

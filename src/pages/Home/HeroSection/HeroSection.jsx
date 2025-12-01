@@ -6,11 +6,11 @@ import { FaUserGraduate, FaBook, FaUsers } from "react-icons/fa";
 export default function HeroSection() {
   return (
     <section className="hero-wrapper">
-      <div className="hero-container">
-        
+      <div className="hero-container container">
+
         {/* MAIN HERO CARD */}
         <div className="hero-card">
-          
+
           {/* LEFT - IMAGE */}
           <div className="hero-left">
             <img src={heroImg} alt="Students celebrating" className="hero-img" />
@@ -18,13 +18,16 @@ export default function HeroSection() {
 
           {/* RIGHT - CONTENT */}
           <div className="hero-right">
-            <h1 className="hero-title">
-              Student<br />
-              Management<br />
-              System
-            </h1>
-            <Link to="/student/dashboard" className="hero-btn"> Student Portal
-            </Link>
+            <div className="p-5">
+              <h1 className="hero-title">
+                Student<br />
+                Management<br />
+                System
+              </h1>
+              <Link to="/student/dashboard" className="hero-btn"> Student Portal
+              </Link>
+            </div>
+
           </div>
         </div>
 

@@ -20,7 +20,7 @@ export default function EventSection() {
                 <span></span>
                 <span></span>
               </div>
-              <h3 className="event-title">Check it out event activities hosted by AIMS</h3>
+              <h3 className="event-title">Check it out event activities hosted by AIIMS</h3>
               <p className="event-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec nulla ipsum.
               </p>

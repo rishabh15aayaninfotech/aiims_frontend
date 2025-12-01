@@ -1,0 +1,139 @@
+/* MAIN SIDEBAR STYLE */
+.admin-sidebar {
+  width: 260px;
+  background: #FFF4EC;
+  padding: 20px 16px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 20px;
+  transition: all 0.3s ease;
+  max-height: 100vh;
+  overflow: hidden;
+}
+@media (max-width:768px) {
+    .admin-sidebar{
+        position: static;
+        width: 100%;
+    }
+}
+.admin-sidebar.collapsed {
+  height: auto;
+  max-height: 80px;
+  padding: 20px 16px;
+}
+
+/* ORANGE HEADER */
+.sidebar-header {
+  background: var(--primary-bg);  /* #FF9437 */
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sidebar-role {
+  font-size: 13px;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.header-arrow {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+}
+
+/* MENU LIST */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  transition: opacity 0.3s ease;
+  flex: 1;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 8px;
+  border-radius: 8px;
+  color: #4a4a4a;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.menu-link:hover {
+  background: #FFE3C8;
+}
+
+.menu-link.active {
+  background: var(--primary-bg);
+  color: white;
+}
+
+.menu-icon {
+  font-size: 16px;
+}
+
+/* HELP SECTION */
+.sidebar-help {
+  margin-top: auto;
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #444;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.help-icon {
+  font-size: 18px;
+}
+
+/* Animation for smooth collapse/expand */
+.admin-sidebar .sidebar-menu,
+.admin-sidebar .sidebar-help {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.admin-sidebar:not(.collapsed) .sidebar-menu,
+.admin-sidebar:not(.collapsed) .sidebar-help {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.admin-sidebar.collapsed .sidebar-menu,
+.admin-sidebar.collapsed .sidebar-help {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}

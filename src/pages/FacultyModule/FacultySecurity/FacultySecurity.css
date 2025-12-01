@@ -1,10 +1,57 @@
 .faculty-security {
   padding: 20px;
+  max-width: 900px;
 }
 
-/* FORM CARD */
-.security-form-card {
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #ffe0c2;
+.faculty-security p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Security List Wrapper */
+.security-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Each Security Card */
+.security-card {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: #fff7ef;
+  border: 1px solid #ffd8b5;
+  border-radius: 10px;
+}
+
+/* Icon Box */
+.icon-box {
+  min-width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: #ffead3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff8a00;
+  font-size: 20px;
+}
+
+/* Titles & Text */
+.sec-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.sec-text {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.contact-note {
+  font-size: 14px;
+  color: #666;
 }

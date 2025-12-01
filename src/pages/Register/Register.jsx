@@ -9,6 +9,11 @@ import ReCAPTCHA from "react-google-recaptcha";
 export default function Register() {
   const [showPass, setShowPass] = useState(false);
   const [showCPass, setShowCPass] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+
+  const handleCaptcha = (value) => {
+    if (value) setCaptchaVerified(true);
+  };
 
   return (
     <div className="register-page" style={{ backgroundImage: `url(${bg})` }}>
@@ -137,6 +142,12 @@ export default function Register() {
               </div>
             </div>
             <div className="col-md-6 mt-3">
+              <div className="recaptcha-box">
+                <ReCAPTCHA
+                  sitekey="6LfGt_grAAAAAKP2MrWG_PwVCP7t7bYjbZ78qeNn"
+                  onChange={handleCaptcha}
+                />
+              </div>
             </div>
             <div className="col-md-6 mt-3">
               {/* SUBMIT */}
